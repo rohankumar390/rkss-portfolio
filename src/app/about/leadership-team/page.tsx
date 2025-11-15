@@ -11,6 +11,13 @@ const leaders = [
     image: "/r.png",
   },
   {
+    name: "Adv. XYZ, Legal Advisor",
+    location: "BANGALORE, INDIA",
+    description:
+      "XYZ is an accomplished Advocate with over 10 years of experience in corporate, commercial, and regulatory law. As the Lead Legal Consultant at RKSS Consultants, she provides strategic advisory on legal, contractual, and compliance matters. Her core expertise spans Corporate & Commercial Law, Contract Management, Regulatory Compliance, IPR, Arbitration & Dispute Resolution, and Legal Due Diligence.",
+    image: "/p.jpeg",
+  },
+  {
     name: "CA Suresh Sethi, Lead Consultant | Chartered Accountant",
     location: "NEW DELHI, INDIA",
     description:
