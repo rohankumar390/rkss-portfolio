@@ -1,54 +1,86 @@
-import { ArrowRight } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 export default function ContactUs() {
   return (
     <section className="bg-white">
-      {/* Top Section */}
-      <div className="max-w-7xl mx-auto px-6 md:px-16 py-20 grid md:grid-cols-2 gap-10">
-
-        {/* Left Heading */}
-        <div className="flex items-start gap-3">
-          <ArrowRight className="text-blue-600 w-6 h-6 mt-1" />
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-700">
-            Get in Touch
+      {/* TOP CONTENT */}
+      <div className="max-w-7xl mx-auto px-6 md:px-16 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-start">
+        
+        {/* LEFT: HEADING + TEXT */}
+        <div>
+          <h2 className="text-3xl md:text-5xl font-bold text-[#0A2440] leading-tight">
+            Let’s Connect
           </h2>
+
+          <p className="mt-4 text-gray-600 text-lg leading-relaxed max-w-md">
+            Have a question about tax, compliance, or setting up your business?  
+            Our team is here to guide you with clarity and expert support.
+          </p>
+
+          {/* Optional CTA Box */}
+          <div className="mt-8 bg-blue-50 border border-blue-100 p-6 rounded-xl max-w-md">
+            <h3 className="text-xl font-semibold text-blue-800">
+              Need a Consultation?
+            </h3>
+            <p className="text-gray-600 mt-2">
+              Reach out to us and our experts will get back to you shortly.
+            </p>
+            <a
+              href="/contact"
+              className="inline-flex items-center gap-2 mt-4 text-blue-700 font-medium hover:underline"
+            >
+              Schedule a Call <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
         </div>
 
-        {/* Right Contact Details */}
-        <div className="space-y-6 text-gray-700">
-          <div className="flex flex-col">
-            <span className="font-semibold text-blue-700">Office</span>
-            <span className="text-gray-800">
-              India
-            </span>
+        {/* RIGHT: CONTACT DETAILS */}
+        <div className="space-y-6 text-gray-700 text-lg">
+
+          {/* Location */}
+          <div className="flex items-start gap-4">
+            <MapPin className="w-6 h-6 text-blue-700 flex-shrink-0" />
+            <div>
+              <span className="font-semibold text-[#0A2440]">Our Office</span>
+              <p className="mt-1">New Delhi, India</p>
+            </div>
           </div>
 
-          <div className="flex flex-col">
-            <span className="font-semibold text-blue-700">Email</span>
-            <span className="text-gray-800">Khanna1975@yahoo.co.in</span>
+          {/* Email */}
+          <div className="flex items-start gap-4">
+            <Mail className="w-6 h-6 text-blue-700 flex-shrink-0" />
+            <div>
+              <span className="font-semibold text-[#0A2440]">Email</span>
+              <p className="mt-1">Khanna1975@yahoo.co.in</p>
+            </div>
           </div>
 
-          <div className="flex flex-col">
-            <span className="font-semibold text-blue-700">Phone</span>
-            <span className="text-gray-800">
-              (+91) 99584 55662
-            </span>
+          {/* Phone */}
+          <div className="flex items-start gap-4">
+            <Phone className="w-6 h-6 text-blue-700 flex-shrink-0" />
+            <div>
+              <span className="font-semibold text-[#0A2440]">Phone</span>
+              <p className="mt-1">(+91) 99584 55662</p>
+            </div>
           </div>
+
         </div>
-
       </div>
 
-      {/* Bottom Full-Width Image */}
-<div className="w-full max-h-[343.5px] overflow-hidden">
-  <Image
-    src="/contact-bg.png"
-    alt="Contact Background"
-    width={1920}
-    height={1080}
-    className="object-cover w-full h-full"
-  />
-</div>
+      {/* BOTTOM IMAGE */}
+      {/* BOTTOM IMAGE — Hidden on Mobile */}
+      <div className="hidden sm:block w-full h-[320px] md:h-[400px] lg:h-[480px] overflow-hidden">
+        <Image
+          src="/contact-bg.png"
+          alt="Contact Background"
+          width={1920}
+          height={1080}
+          className="object-cover w-full h-full"
+          priority
+        />
+      </div>
+
     </section>
   );
 }
