@@ -7,20 +7,41 @@ import { motion, AnimatePresence } from 'framer-motion';
 const NAV_LINKS = [
   { label: 'About', href: '/about' },
   { label: 'Services', href: '/services' },
-  // { label: 'Resources', href: '/resources' },
+
+  {
+    label: 'Resources',
+    children: [
+      { label: 'Blog & Updates', href: '/resources/blog' },
+      { label: 'Tax Calendar', href: '/resources/tax-calendar' },
+      { label: 'Downloads', href: '/resources/downloads' },
+      { label: 'FAQs', href: '/resources/faqs' },
+    ],
+  },
+
+  {
+    label: 'Legal',
+    children: [
+      { label: 'Privacy Policy', href: '/legal/privacy-policy' },
+      { label: 'Terms of Use', href: '/legal/terms-of-use' },
+      { label: 'Disclaimer', href: '/legal/disclaimer' },
+    ],
+  },
+
   { label: 'Contact', href: '/contact' },
 ];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
 
   return (
     <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-100 z-50">
       <div className="container mx-auto px-6 flex justify-between items-center h-16">
-        {/* ✅ Logo + Company Name */}
+        
+        {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/logo.png"      // <-- put your logo file here (e.g. /public/logo.png)
+            src="/logo.png"
             alt="RKSS Consultants Logo"
             width={40}
             height={40}
@@ -34,14 +55,44 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-10 font-medium text-gray-700">
-          {NAV_LINKS.map(({ label, href }) => (
-            <li key={label}>
-              <Link
-                href={href}
-                className="relative hover:text-blue-600 transition-colors duration-200 after:content-[''] after:absolute after:w-0 hover:after:w-full after:h-[2px] after:bg-blue-600 after:left-0 after:-bottom-1 after:transition-all after:duration-300"
-              >
-                {label}
-              </Link>
+          {NAV_LINKS.map((item, i) => (
+            <li
+              key={i}
+              className="relative group cursor-pointer"
+              onMouseEnter={() => setOpenDropdown(i)}
+              onMouseLeave={() => setOpenDropdown(null)}
+            >
+              {item.href ? (
+                <Link
+                  href={item.href}
+                  className="hover:text-blue-600 transition-colors duration-200"
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <span className="hover:text-blue-600 transition-colors duration-200">
+                  {item.label}
+                </span>
+              )}
+
+              {/* Dropdown */}
+              {item.children && (
+                <div
+                  className={`absolute left-0 mt-2 bg-white shadow-lg border border-gray-100 rounded-lg py-2 w-56 transition-all duration-300 ${
+                    openDropdown === i ? 'opacity-100 visible' : 'opacity-0 invisible'
+                  }`}
+                >
+                  {item.children.map((sub, j) => (
+                    <Link
+                      key={j}
+                      href={sub.href}
+                      className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-700"
+                    >
+                      {sub.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
             </li>
           ))}
         </ul>
@@ -81,26 +132,37 @@ export default function Navbar() {
             transition={{ duration: 0.25 }}
             className="md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full"
           >
-            {NAV_LINKS.map(({ label, href }) => (
-              <Link
-                key={label}
-                href={href}
-                className="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition font-medium"
-                onClick={() => setMenuOpen(false)}
-              >
-                {label}
-              </Link>
-            ))}
-            {/* <div className="px-6 py-3">
-              <Link href="/get-started">
-                <button
-                  onClick={() => setMenuOpen(false)}
-                  className="w-full bg-blue-600 text-white py-2 rounded-xl font-semibold hover:bg-blue-700 transition"
+            {NAV_LINKS.map((item, i) => (
+              <div key={i}>
+                <div
+                  className="px-6 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:text-blue-700 flex justify-between items-center"
+                  onClick={() =>
+                    setOpenDropdown(openDropdown === i ? null : i)
+                  }
                 >
-                  Get Started
-                </button>
-              </Link>
-            </div> */}
+                  {item.label}
+                  {item.children && (
+                    <span>{openDropdown === i ? '−' : '+'}</span>
+                  )}
+                </div>
+
+                {/* Mobile Submenu */}
+                {item.children && openDropdown === i && (
+                  <div className="bg-gray-50 border-l">
+                    {item.children.map((sub, j) => (
+                      <Link
+                        key={j}
+                        href={sub.href}
+                        onClick={() => setMenuOpen(false)}
+                        className="block px-10 py-3 text-gray-700 hover:bg-blue-100 hover:text-blue-700"
+                      >
+                        {sub.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
           </motion.div>
         )}
       </AnimatePresence>
