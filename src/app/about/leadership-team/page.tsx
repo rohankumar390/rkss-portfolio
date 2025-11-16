@@ -4,18 +4,18 @@ import Image from "next/image";
 
 const leaders = [
   {
+    name: "CA Suresh Sethi, Found and Principal Advisor",
+    location: "NEW DELHI, INDIA",
+    description:
+      "As the Founder and driving force behind RKSS Consultants, CA Suresh Sethi brings over 40 years of expertise in finance and regulatory advisory. His core strengths include Auditing, Taxation, Financial Planning, Business Restructuring, Corporate Compliance, and Portfolio Management.",
+    image: "/s.png",
+  },
+  {
     name: "CMA Raman Khanna, Founder",
     location: "NEW DELHI, INDIA",
     description:
       "Raman brings over 25 years of expertise in Corporate Finance, Taxation, Accounting, and Management Consultancy. As the Founder, he leads strategy, innovation, and growth, driving RKSS Consultants toward sustained excellence and client impact.",
     image: "/r.png",
-  },
-  {
-    name: "CA Suresh Sethi, Lead Consultant",
-    location: "NEW DELHI, INDIA",
-    description:
-      "The driving force behind RKSS Consultants, CA Suresh Sethi brings over 40 years of expertise in finance and regulatory advisory. His core strengths include Auditing, Taxation, Financial Planning, Business Restructuring, Corporate Compliance, and Portfolio Management.",
-    image: "/s.png",
   },
   {
     name: "Adv. XYZ, Legal Advisor",

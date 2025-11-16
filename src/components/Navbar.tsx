@@ -48,7 +48,7 @@ export default function Navbar() {
             priority
           />
           <span className="text-2xl font-semibold text-gray-800 tracking-tight">
-            RKSS <span className="text-blue-600 font-bold">Consultants</span>
+            RKSS <span className="text-[#014997] font-bold">Consultants</span>
           </span>
         </Link>
 

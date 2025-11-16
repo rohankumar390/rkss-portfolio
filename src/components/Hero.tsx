@@ -2,18 +2,18 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="
+    <section
+      className="
   relative w-full
   h-[39vh]
   sm:h-[55vh]
   md:h-[80vh]
-  lg:h-[100vh]
+  lg:h-[120vh]
   flex items-center justify-center
   overflow-hidden 
   pt-24
   z-[1]
 ">
-
       {/* Background Image */}
       <Image
         src="/banner_3.png"

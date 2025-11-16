@@ -1,5 +1,4 @@
 import {
-  ArrowRight,
   Building2,
   Receipt,
   Briefcase,
@@ -58,83 +57,57 @@ const services = [
 export default function ServicesOverview() {
   return (
     <section className="bg-[#0B2B45] text-white py-24 px-6 md:px-16 relative overflow-hidden">
-      {/* Subtle gradient overlay */}
+      {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start relative z-10">
-        {/* LEFT SIDE CONTENT */}
-        <div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-            Our Services
-          </h2>
 
-          {/* <p className="text-lg opacity-90 mb-10 leading-relaxed max-w-xl">
-            Comprehensive financial, regulatory, audit and business advisory,
-            engineered to support modern organizations and long-term growth.
-          </p> */}
+      {/* MAIN CONTENT */}
+      <div className="max-w-7xl mx-auto relative z-10">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+          Our Services
+        </h2>
 
-          {/* Detailed Service List */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            {services.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <div key={index} className="group flex gap-4 items-start">
-                  <div className="bg-white/10 p-3 rounded-lg group-hover:bg-white/20 transition">
-                    <Icon className="w-6 h-6 text-blue-200" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold group-hover:text-blue-100 transition">
-                      {service.title}
-                    </h3>
-                    <p className="text-sm opacity-80 mt-1 max-w-md leading-relaxed">
-                      {service.desc}
-                    </p>
-                    {/* <Link
-                      href="/services"
-                      className="flex items-center gap-2 text-blue-200 mt-3 text-sm font-medium group-hover:gap-3 transition-all"
-                    >
-                      Learn More <ArrowRight className="w-4 h-4" />
-                    </Link> */}
-                  </div>
+        {/* Services List Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-12">
+          {services.map((service, index) => {
+            const Icon = service.icon;
+            return (
+              <div key={index} className="group flex gap-4 items-start">
+                <div className="bg-white/10 p-3 rounded-lg group-hover:bg-white/20 transition">
+                  <Icon className="w-6 h-6 text-blue-200" />
                 </div>
-              );
-            })}
-          </div>
-
-          {/* CTA */}
-          <div className="mt-10">
-            <Link
-              className="inline-block bg-white text-[#0B2B45] font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition"
-              href="/contact"
-            >
-              Speak with an Expert
-            </Link>
-          </div>
+                <div>
+                  <h3 className="text-xl font-semibold group-hover:text-blue-100 transition">
+                    {service.title}
+                  </h3>
+                  <p className="text-sm opacity-80 mt-1 max-w-md leading-relaxed">
+                    {service.desc}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
         </div>
 
-        {/* RIGHT IMAGE */}
-        {/* RIGHT IMAGE SECTION */}
-        <div className="hidden lg:flex flex-col gap-20 justify-center">
-          {/* TOP IMAGE */}
-          <div className="w-full max-w-md rounded-xl overflow-hidden shadow-2xl shadow-black/30">
-            <Image
-              src="/s1.png"
-              alt="Professional team working"
-              width={600}
-              height={500}
-              className="object-cover w-full h-full"
-            />
-          </div>
+        {/* CTA */}
+        <div className="mt-10">
+          <Link
+            className="inline-block bg-white text-[#0B2B45] font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition"
+            href="/contact"
+          >
+            Speak with an Expert
+          </Link>
+        </div>
 
-          {/* BOTTOM IMAGE */}
-          <div className="w-full max-w-md rounded-xl overflow-hidden shadow-2xl shadow-black/30">
-            <Image
-              src="/s2.png"
-              alt="Professional team working"
-              width={600}
-              height={500}
-              className="object-cover w-full h-full"
-            />
-          </div>
+        {/* 📌 Vertical Image BELOW the section */}
+       {/* FULL-WIDTH IMAGE (hidden on mobile) */}
+<div className="hidden sm:block mt-10 w-full">
+  <Image
+    src="/service.png"
+    alt="Our Services Visual"
+    width={2000}
+    height={1600}
+    className="object-cover w-full h-[500px] md:h-[650px] lg:h-[auto]"
+  />
         </div>
       </div>
     </section>

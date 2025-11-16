@@ -27,7 +27,7 @@ export default function ContactUs() {
               Reach out to us and our experts will get back to you shortly.
             </p>
             <a
-              href="/contact"
+              href="https://wa.me/+919958455662?text=Hi%20RKSS%20Consultants,%20I’d%20like%20to%20schedule%20a%20call%20to%20discuss%20your%20services"
               className="inline-flex items-center gap-2 mt-4 text-blue-700 font-medium hover:underline"
             >
               Schedule a Call <ArrowRight className="w-4 h-4" />
@@ -43,7 +43,7 @@ export default function ContactUs() {
             <MapPin className="w-6 h-6 text-blue-700 flex-shrink-0" />
             <div>
               <span className="font-semibold text-[#0A2440]">Our Office</span>
-              <p className="mt-1">New Delhi, India</p>
+              <p className="mt-1">Office: 42, GF, WTC, Babar Rd, Office New Delhi - 110 001</p>
             </div>
           </div>
 
@@ -52,7 +52,7 @@ export default function ContactUs() {
             <Mail className="w-6 h-6 text-blue-700 flex-shrink-0" />
             <div>
               <span className="font-semibold text-[#0A2440]">Email</span>
-              <p className="mt-1">Khanna1975@yahoo.co.in</p>
+              <p className="mt-1">rkssconsultants@gmail.com</p>
             </div>
           </div>
 
@@ -61,7 +61,7 @@ export default function ContactUs() {
             <Phone className="w-6 h-6 text-blue-700 flex-shrink-0" />
             <div>
               <span className="font-semibold text-[#0A2440]">Phone</span>
-              <p className="mt-1">(+91) 99584 55662</p>
+              <p className="mt-1">(+91) 9958455662, 9810117603, 011-456711616,</p>
             </div>
           </div>
 
