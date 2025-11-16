@@ -46,7 +46,7 @@ const services = [
 
 export default function ServicesPreview() {
   return (
-    <section className="bg-gray-50 text-gray-900 py-24 font-[Inter]">
+      <section className="bg-gray-50 text-gray-900 sm:py-14 md:py-20 lg:py-24 font-[Inter]">
       <div className="container mx-auto px-6 md:px-10">
         {/* Section Header */}
         <div className="text-center mb-16">
