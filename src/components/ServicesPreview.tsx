@@ -54,8 +54,7 @@ export default function ServicesPreview() {
             Our Services
           </h2>
           <p className="mt-4 text-gray-600 text-lg max-w-2xl mx-auto">
-            Expert financial, compliance, and strategic solutions for modern
-            businesses.
+            We deliver comprehensive financial, tax, and compliance solutions that help businesses operate smoothly and grow confidently.
           </p>
         </div>
 
