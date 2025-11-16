@@ -67,10 +67,10 @@ export default function ServicesOverview() {
             Our Services
           </h2>
 
-          <p className="text-lg opacity-90 mb-10 leading-relaxed max-w-xl">
+          {/* <p className="text-lg opacity-90 mb-10 leading-relaxed max-w-xl">
             Comprehensive financial, regulatory, audit and business advisory,
             engineered to support modern organizations and long-term growth.
-          </p>
+          </p> */}
 
           {/* Detailed Service List */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
