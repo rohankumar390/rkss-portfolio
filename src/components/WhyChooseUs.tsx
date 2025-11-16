@@ -3,7 +3,7 @@ import { CheckCircle2 } from "lucide-react";
 const highlights = [
   {
     title: "30+ Years of Proven Expertise",
-    desc: "Decades of hands-on experience in taxation, finance, audit, and corporate compliance across diverse industries.",
+    desc: "Decades of expertise in taxation, finance, audit, and corporate compliance across various key industries.",
   },
   {
     title: "Transparent, Ethical, and Reliable",
