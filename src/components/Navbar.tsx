@@ -13,8 +13,8 @@ const NAV_LINKS = [
     children: [
       { label: 'Blog & Updates', href: '/resources/blog' },
       { label: 'Tax Calendar', href: '/resources/tax-calendar' },
-      { label: 'Downloads', href: '/resources/downloads' },
-      { label: 'FAQs', href: '/resources/faqs' },
+      // { label: 'Downloads', href: '/resources/downloads' },
+      // { label: 'FAQs', href: '/resources/faqs' },
     ],
   },
 
