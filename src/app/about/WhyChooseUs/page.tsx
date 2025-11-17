@@ -19,9 +19,11 @@ export default function WhyChooseUs() {
         </p>
 
         {/* Mission Section */}
-        <h3 className="text-2xl md:text-4xl font-serif font-bold mt-16 mb-6 text-[#0A2238]">
+        <h2 className="pt-10 text-3xl md:text-5xl font-serif font-bold mb-4 text-[#0A2238]">
           Our Mission
-        </h3>
+        </h2>
+
+        <div className="h-[2px] w-20 bg-blue-200 mx-auto rounded-full" />
 
         <div className="bg-blue-50/30 backdrop-blur-sm p-8 md:p-10 rounded-2xl shadow-sm max-w-3xl mx-auto">
 
