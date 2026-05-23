@@ -2,7 +2,7 @@
 import './globals.css';
 import { ReactNode } from 'react';
 import type { Metadata } from 'next';
-import GoogleAnalytics from '@/components/GoogleAnalytics';
+import GoogleAnalytics from '../components/GoogleAnalytics';
 import Navbar from '../components/Navbar';
 import { Poppins, Inter } from 'next/font/google';
 
