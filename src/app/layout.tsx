@@ -1,8 +1,9 @@
 // src/app/layout.tsx
 import './globals.css';
 import { ReactNode } from 'react';
+import type { Metadata } from 'next';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import { Poppins, Inter } from 'next/font/google';
 
 const poppins = Poppins({
@@ -16,18 +17,24 @@ const inter = Inter({
   variable: '--font-inter',
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'RKSS Consultants',
   description: 'Insight-Driven. Impact-Focused. Client-Centered.',
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: ReactNode;
+}) {
   return (
     <html lang="en">
-      <body className="font-sans bg-white text-gray-900">
+      <body
+        className={`${poppins.variable} ${inter.variable} font-sans bg-white text-gray-900`}
+      >
+        <GoogleAnalytics />
         <Navbar />
         <main>{children}</main>
-        {/* <Footer /> */}
       </body>
     </html>
   );
