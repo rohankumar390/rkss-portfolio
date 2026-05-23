@@ -2,7 +2,7 @@ import { CheckCircle2 } from "lucide-react";
 
 const highlights = [
   {
-    title: "30+ Years of Proven Expertise",
+    title: "25+ Years of Proven Expertise",
     desc: "Decades of expertise in taxation, finance, audit, and corporate compliance across various key industries.",
   },
   {
