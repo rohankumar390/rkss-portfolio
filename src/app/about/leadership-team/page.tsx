@@ -1,69 +1,48 @@
 // src/components/about/LeadershipTeam.tsx
 "use client";
-import Image from "next/image";
-
-const leaders = [
-  {
-    name: "CA Suresh Sethi, Found and Principal Advisor",
-    location: "NEW DELHI, INDIA",
-    description:
-      "As the Founder and driving force behind RKSS Consultants, CA Suresh Sethi brings over 40 years of expertise in finance and regulatory advisory. His core strengths include Auditing, Taxation, Financial Planning, Business Restructuring, Corporate Compliance, and Portfolio Management.",
-    image: "/s.png",
-  },
-  {
-    name: "CMA Raman Khanna, Founder",
-    location: "NEW DELHI, INDIA",
-    description:
-      "Raman brings over 25 years of expertise in Corporate Finance, Taxation, Accounting, and Management Consultancy. As the Founder, he leads strategy, innovation, and growth, driving RKSS Consultants toward sustained excellence and client impact.",
-    image: "/r.png",
-  },
-  {
-    name: "Adv. XYZ, Legal Advisor",
-    location: "BANGALORE, INDIA",
-    description:
-      "XYZ is an accomplished Advocate with over 10 years of experience in corporate, commercial, and regulatory law. As the Lead Legal Consultant at RKSS Consultants, she provides strategic advisory on legal, contractual, and compliance matters. Her core expertise spans Corporate & Commercial Law, Contract Management, Regulatory Compliance, IPR, Arbitration & Dispute Resolution, and Legal Due Diligence.",
-    image: "/p.jpeg",
-  }
-];
 
 export default function LeadershipTeam() {
   return (
-    <section className="bg-[#0E3655] py-16 px-6 md:px-16">
-      <h2 className="text-white text-3xl md:text-4xl font-bold mb-10">
-        Leadership Team
-      </h2>
+    <section className="bg-[#0E3655] py-20 px-6 md:px-16">
+      <div className="max-w-6xl mx-auto">
+        
+        {/* Heading */}
+        <div className="text-center mb-12">
+          <h2 className="text-white text-4xl md:text-5xl font-bold">
+            Our Team
+          </h2>
 
-      <div className="space-y-16">
-        {leaders.map((leader, index) => (
-          <div
-            key={index}
-            className="flex flex-col md:flex-row items-start gap-6 text-white"
-          >
-            <div className="w-[120px] h-[120px] flex-shrink-0">
-              <img
-                src={leader.image}
-                alt={leader.name}
-                width={120}
-                height={120}
-                className="rounded-full w-[120px] h-[120px] object-cover"
-                onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).src =
-                    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Crect width='100%25' height='100%25' fill='%230b2b3a'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='20' fill='%23ffffff'%3E%F0%9F%91%A4%3C/text%3E%3C/svg%3E";
-                }}
-              />
-            </div>
+          <div className="w-24 h-1 bg-[#D4AF37] mx-auto mt-4 rounded-full"></div>
 
-            <div>
-              <h3 className="text-xl font-semibold">{leader.name}</h3>
-              <p className="text-sm font-semibold mt-1 opacity-80">
-                {leader.location}
-              </p>
-              <p className="mt-3 leading-relaxed opacity-90 max-w-3xl">
-                {leader.description}
-              </p>
-            </div>
-          </div>
-        ))}
+          <p className="text-gray-300 mt-5 text-lg">
+            Excellence driven by expertise, integrity, and strategic insight
+          </p>
+        </div>
+
+        {/* Content Card */}
+        <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl">
+          <p className="text-gray-700 text-lg leading-9 tracking-wide">
+            Our firm is driven by a distinguished team of professionals whose
+            collective expertise spans taxation, accounting, assurance, and
+            strategic advisory. With a shared commitment to excellence,
+            integrity, and precision, our people bring deep technical knowledge
+            together with a practical understanding of today’s dynamic
+            regulatory and business environment.
+          </p>
+
+          <p className="text-gray-700 text-lg leading-9 tracking-wide mt-6">
+            Our team comprises highly qualified Chartered Accountants,
+            Cost & Management Accountants, Company Secretaries, and Legal
+            Professionals, each bringing extensive domain knowledge,
+            multidisciplinary expertise, and rich practical experience.
+          </p>
+
+          <p className="text-gray-700 text-lg leading-9 tracking-wide mt-6">
+            This diverse professional strength enables us to deliver
+            comprehensive, well-integrated, and legally robust solutions
+            tailored to complex business and regulatory needs.
+          </p>
+        </div>
       </div>
     </section>
   );
