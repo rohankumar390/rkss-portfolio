@@ -30,7 +30,7 @@ export default function CTASection() {
           </div>
           <div className="flex items-center space-x-3 text-gray-200">
             <MapPin className="w-5 h-5 text-blue-300" />
-            <span className="text-base md:text-lg font-medium">Office: 42, GF, WTC, Babar Rd, Office New Delhi - 110 001</span>
+            <span className="text-base md:text-lg font-medium">Office: 42, GF, WTC, Babar Rd, New Delhi - 110 001</span>
           </div>
         </div>
 

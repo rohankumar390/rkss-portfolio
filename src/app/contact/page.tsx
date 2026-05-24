@@ -43,7 +43,7 @@ export default function ContactUs() {
             <MapPin className="w-6 h-6 text-blue-700 flex-shrink-0" />
             <div>
               <span className="font-semibold text-[#0A2440]">Our Office</span>
-              <p className="mt-1">Office: 42, GF, WTC, Babar Rd, Office New Delhi - 110 001</p>
+              <p className="mt-1">Office: 42, GF, WTC, Babar Rd, New Delhi - 110 001</p>
             </div>
           </div>
 

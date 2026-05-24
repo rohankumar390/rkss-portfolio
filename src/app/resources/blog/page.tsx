@@ -1,146 +1,140 @@
 export const metadata = {
   title: "Common Mistakes in Income Tax Return Filing & How to Avoid Them",
   description:
-    "Avoid common errors in ITR filing such as wrong ITR form selection, AIS mismatches, TDS discrepancies, and reporting mistakes. Learn how to file your tax return correctly.",
+    "Avoid common errors in ITR filing such as wrong ITR form selection, AIS mismatches, TDS discrepancies, and reporting mistakes.",
 };
 
 export default function IncomeTaxMistakesBlog() {
   return (
-    <section className="py-20 px-6 md:px-20 bg-white text-[#0E3655]">
-      <div className="max-w-4xl mx-auto">
-        {/* Blog Title */}
-        <h1 className="text-3xl md:text-5xl font-bold font-serif text-[#0A2238] leading-tight">
-          Common Mistakes in Income Tax Return Filing & How to Avoid Them
-        </h1>
+    <section className="bg-[#0E3655] py-20 px-6 md:px-16">
+      <div className="max-w-6xl mx-auto">
 
-        <p className="mt-4 text-gray-500 text-lg">
-          INCOME TAX • Updated: {new Date().toLocaleDateString()}
-        </p>
+        {/* Heading */}
+        <div className="text-center mb-14">
+          <h1 className="text-white text-4xl md:text-5xl font-bold leading-tight">
+            Common Mistakes in Income Tax Return Filing
+          </h1>
 
-        <div className="h-[2px] w-24 bg-blue-200 mt-6 mb-10 rounded-full" />
+          <div className="w-24 h-1 bg-[#D4AF37] mx-auto mt-5 rounded-full"></div>
 
-        {/* INTRO */}
-        <p className="text-lg leading-relaxed mb-8">
-          Filing your Income Tax Return (ITR) may seem simple, but even a small
-          mistake can trigger mismatches, delays, defective return notices, or
-          scrutiny. Here are the most common errors taxpayers make—and how you
-          can avoid them.
-        </p>
+          <p className="text-gray-300 mt-5 text-lg">
+            INCOME TAX • Updated: {new Date().toLocaleDateString()}
+          </p>
+        </div>
 
-        {/* SECTION 1 */}
-        <h2 className="text-2xl font-bold mt-12 mb-4">
-          1. Selecting the Wrong ITR Form
-        </h2>
-        <p className="text-lg leading-relaxed mb-4">
-          Using an incorrect ITR form can lead to a{" "}
-          <strong>defective return notice (u/s 139(9))</strong>. Each form is
-          meant for a specific type of taxpayer.
-        </p>
-        <p className="font-semibold mb-2">Fix:</p>
-        <ul className="list-disc pl-6 space-y-1 text-lg leading-relaxed">
-          <li>
-            <strong>ITR-1</strong> → Salaried individuals
-          </li>
-          <li>
-            <strong>ITR-2</strong> → Capital gains / more than one house
-          </li>
-          <li>
-            <strong>ITR-3</strong> → Business or profession
-          </li>
-          <li>
-            <strong>ITR-4</strong> → Presumptive income (44AD/44ADA/44AE)
-          </li>
-        </ul>
+        {/* Main Card */}
+        <div className="bg-white rounded-3xl p-8 md:p-14 shadow-2xl max-w-5xl mx-auto">
 
-        {/* SECTION 2 */}
-        <h2 className="text-2xl font-bold mt-12 mb-4">
-          2. Ignoring AIS/TIS Mismatches
-        </h2>
-        <p className="text-lg leading-relaxed mb-2">
-          AIS (Annual Information Statement) now tracks almost everything:
-        </p>
-        <ul className="list-disc pl-6 space-y-1 text-lg leading-relaxed">
-          <li>Property transactions</li>
-          <li>Mutual fund purchases/redemptions</li>
-          <li>Rent received</li>
-          <li>FD interest, dividends, securities transactions</li>
-        </ul>
+          {/* Intro */}
+          <p className="text-gray-700 text-lg leading-9 tracking-wide">
+            Filing your Income Tax Return (ITR) may seem simple, but even a
+            small mistake can trigger mismatches, delays, defective return
+            notices, or scrutiny. Here are the most common errors taxpayers
+            make—and how you can avoid them.
+          </p>
 
-        <p className="font-semibold mt-4 mb-2">Fix:</p>
-        <ul className="list-disc pl-6 space-y-1 text-lg leading-relaxed">
-          <li>Download AIS & TIS before filing.</li>
-          <li>Reconcile with Form 26AS, bank statements, and books.</li>
-        </ul>
+          {/* Reusable Section */}
+          {[
+            {
+              title: "1. Selecting the Wrong ITR Form",
+              content:
+                "Using an incorrect ITR form can lead to a defective return notice (u/s 139(9)). Each form is meant for a specific taxpayer category.",
+              fix: [
+                "ITR-1 → Salaried individuals",
+                "ITR-2 → Capital gains / multiple house properties",
+                "ITR-3 → Business or profession",
+                "ITR-4 → Presumptive income",
+              ],
+            },
+            {
+              title: "2. Ignoring AIS/TIS Mismatches",
+              content:
+                "AIS now tracks property transactions, mutual funds, dividends, rent, FD interest, and more.",
+              fix: [
+                "Download AIS & TIS before filing",
+                "Reconcile with Form 26AS",
+                "Check bank statements",
+              ],
+            },
+            {
+              title: "3. Missing Out on TDS Credits",
+              content:
+                "Many taxpayers forget TDS deducted from salary, rent, property transactions, and bank interest.",
+              fix: [
+                "Verify Form 26AS",
+                "Check Form 16",
+                "Reconcile all TDS entries",
+              ],
+            },
+            {
+              title: "4. Wrong Reporting of Capital Gains",
+              content:
+                "Errors in reporting mutual funds, stock gains, or indexed cost calculations are common.",
+              fix: [
+                "Use broker statements",
+                "Check CAS reports",
+                "Verify gain calculations",
+              ],
+            },
+            {
+              title: "5. Not Verifying Return After Filing",
+              content:
+                "An unverified return is treated as not filed.",
+              fix: [
+                "Verify within 30 days",
+                "Use Aadhaar OTP",
+                "Use Net Banking or EVC",
+              ],
+            },
+          ].map((section, index) => (
+            <div
+              key={index}
+              className="mt-12 border-t border-gray-200 pt-10"
+            >
+              <h2 className="text-2xl font-bold text-[#0E3655] mb-4">
+                {section.title}
+              </h2>
 
-        {/* SECTION 3 */}
-        <h2 className="text-2xl font-bold mt-12 mb-4">
-          3. Not Reporting All Bank Accounts
-        </h2>
-        <p className="text-lg leading-relaxed">
-          From FY 2025–26, taxpayers must declare all active savings and current
-          accounts.
-        </p>
-        <p className="font-semibold mt-4">Fix:</p>
-        <p className="text-lg leading-relaxed">
-          Update your list of bank accounts annually before filing ITR.
-        </p>
+              <p className="text-gray-700 text-lg leading-8">
+                {section.content}
+              </p>
 
-        {/* SECTION 4 */}
-        <h2 className="text-2xl font-bold mt-12 mb-4">
-          4. Missing Out on TDS Credits
-        </h2>
-        <p className="text-lg leading-relaxed">
-          Many taxpayers forget TDS deducted under:
-        </p>
-        <ul className="list-disc pl-6 space-y-1 text-lg leading-relaxed">
-          <li>Salary (Form 16)</li>
-          <li>Rent u/s 194-IB</li>
-          <li>Property sale/purchase u/s 194-IA</li>
-          <li>Bank FD interest</li>
-        </ul>
+              <div className="mt-6 bg-[#0E3655]/5 rounded-2xl p-6">
+                <h3 className="font-bold text-[#0E3655] mb-4">
+                  Recommended Action
+                </h3>
 
-        <p className="font-semibold mt-4">Fix:</p>
-        <p className="text-lg leading-relaxed">
-          Reconcile TDS with <strong>Form 26AS</strong> before filing.
-        </p>
+                <ul className="space-y-3">
+                  {section.fix.map((item, i) => (
+                    <li key={i} className="flex gap-3">
+                      <span className="text-[#D4AF37] font-bold">
+                        ✓
+                      </span>
+                      <span className="text-gray-700">
+                        {item}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
 
-        {/* SECTION 5 */}
-        <h2 className="text-2xl font-bold mt-12 mb-4">
-          5. Wrong Reporting of Capital Gains
-        </h2>
-        <p className="text-lg leading-relaxed mb-2">Common mistakes include:</p>
-        <ul className="list-disc pl-6 space-y-1 text-lg leading-relaxed">
-          <li>Not reporting mutual fund switch gains</li>
-          <li>Incorrect indexed cost calculation</li>
-          <li>Ignoring STT applicability</li>
-        </ul>
+          {/* Conclusion */}
+          <div className="mt-14 border-t border-gray-200 pt-10">
+            <h2 className="text-2xl font-bold text-[#0E3655] mb-4">
+              Conclusion
+            </h2>
 
-        <p className="font-semibold mt-4 mb-2">Fix:</p>
-        <p className="text-lg leading-relaxed">
-          Use broker statements, CAS reports, and capital gains summaries to
-          ensure accuracy.
-        </p>
+            <p className="text-gray-700 text-lg leading-9 tracking-wide">
+              Filing an accurate ITR requires proper documentation,
+              reconciliation, and attention to detail. Avoiding these
+              common mistakes ensures smoother processing and reduces
+              the chances of notices or scrutiny.
+            </p>
+          </div>
 
-        {/* SECTION 6 */}
-        <h2 className="text-2xl font-bold mt-12 mb-4">
-          6. Not Verifying Return After Filing
-        </h2>
-        <p className="text-lg leading-relaxed mb-2">
-          An unverified return is treated as <strong>NOT filed</strong>.
-        </p>
-        <p className="font-semibold">Fix:</p>
-        <ul className="list-disc pl-6 space-y-1 text-lg leading-relaxed">
-          <li>Verify within 30 days of filing.</li>
-          <li>Use Aadhaar OTP, net-banking, or EVC.</li>
-        </ul>
-
-        {/* Conclusion */}
-        <h2 className="text-2xl font-bold mt-12 mb-4">Conclusion</h2>
-        <p className="text-lg leading-relaxed mb-10">
-          Filing an accurate ITR requires proper documentation, reconciliation,
-          and attention to detail. Avoiding these common mistakes ensures smooth
-          processing and reduces the chances of scrutiny or notices.
-        </p>
+        </div>
       </div>
     </section>
   );
