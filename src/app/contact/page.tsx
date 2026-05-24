@@ -3,140 +3,82 @@ import Image from "next/image";
 
 export default function ContactUs() {
   return (
-    <section className="bg-[#0E3655]">
-
+    <section className="bg-white">
       {/* TOP CONTENT */}
-      <div className="max-w-7xl mx-auto px-6 md:px-16 py-20 md:py-24 grid md:grid-cols-2 gap-14 items-center">
-
-        {/* LEFT SIDE */}
+      <div className="max-w-7xl mx-auto px-6 md:px-16 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-start">
+        
+        {/* LEFT: HEADING + TEXT */}
         <div>
-
-          <div className="inline-block px-5 py-2 rounded-full bg-white/10 text-white border border-white/10 mb-6">
-            Contact RKSS Consultants
-          </div>
-
-          <h2 className="text-4xl md:text-6xl font-bold text-white leading-tight">
+          <h2 className="text-3xl md:text-5xl font-bold text-[#0A2440] leading-tight">
             Let’s Connect
           </h2>
 
-          <div className="w-24 h-1 bg-[#D4AF37] mt-6 rounded-full"></div>
-
-          <p className="mt-6 text-gray-300 text-lg leading-9 max-w-lg">
-            Have a question about tax, compliance, or setting up your business?
+          <p className="mt-4 text-gray-600 text-lg leading-relaxed max-w-md">
+            Have a question about tax, compliance, or setting up your business?  
             Our team is here to guide you with clarity and expert support.
           </p>
 
-          {/* CTA CARD */}
-          <div className="mt-10 bg-white rounded-2xl p-8 shadow-xl max-w-lg">
-
-            <h3 className="text-2xl font-bold text-[#0E3655]">
+          {/* Optional CTA Box */}
+          <div className="mt-8 bg-blue-50 border border-blue-100 p-6 rounded-xl max-w-md">
+            <h3 className="text-xl font-semibold text-blue-800">
               Need a Consultation?
             </h3>
-
-            <p className="text-gray-600 mt-3 leading-7">
+            <p className="text-gray-600 mt-2">
               Reach out to us and our experts will get back to you shortly.
             </p>
-
             <a
               href="https://wa.me/+919958455662?text=Hi%20RKSS%20Consultants,%20I’d%20like%20to%20schedule%20a%20call%20to%20discuss%20your%20services"
-              className="
-              inline-flex
-              items-center
-              gap-2
-              mt-6
-              bg-[#0E3655]
-              text-white
-              px-6
-              py-3
-              rounded-xl
-              hover:bg-[#154b73]
-              transition
-              "
+              className="inline-flex items-center gap-2 mt-4 text-blue-700 font-medium hover:underline"
             >
-              Schedule a Call
-              <ArrowRight className="w-4 h-4" />
+              Schedule a Call <ArrowRight className="w-4 h-4" />
             </a>
+          </div>
+        </div>
 
+        {/* RIGHT: CONTACT DETAILS */}
+        <div className="space-y-6 text-gray-700 text-lg">
+
+          {/* Location */}
+          <div className="flex items-start gap-4">
+            <MapPin className="w-6 h-6 text-blue-700 flex-shrink-0" />
+            <div>
+              <span className="font-semibold text-[#0A2440]">Our Office</span>
+              <p className="mt-1">Office: 42, GF, WTC, Babar Rd, New Delhi - 110 001</p>
+            </div>
+          </div>
+
+          {/* Email */}
+          <div className="flex items-start gap-4">
+            <Mail className="w-6 h-6 text-blue-700 flex-shrink-0" />
+            <div>
+              <span className="font-semibold text-[#0A2440]">Email</span>
+              <p className="mt-1">rkssconsultantsindia@gmail.com</p>
+            </div>
+          </div>
+
+          {/* Phone */}
+          <div className="flex items-start gap-4">
+            <Phone className="w-6 h-6 text-blue-700 flex-shrink-0" />
+            <div>
+              <span className="font-semibold text-[#0A2440]">Phone</span>
+              <p className="mt-1">(+91) 9289860204</p>
+            </div>
           </div>
 
         </div>
-
-        {/* RIGHT SIDE */}
-        <div className="space-y-6">
-
-          {[
-            {
-              icon: MapPin,
-              title: "Our Office",
-              value:
-                "Office: 42, GF, WTC, Babar Rd, New Delhi - 110001",
-            },
-            {
-              icon: Mail,
-              title: "Email",
-              value: "rkssconsultantsindia@gmail.com",
-            },
-            {
-              icon: Phone,
-              title: "Phone",
-              value: "(+91) 9289860204",
-            },
-          ].map((item, index) => {
-            const Icon = item.icon;
-
-            return (
-              <div
-                key={index}
-                className="
-                  bg-white
-                  rounded-2xl
-                  p-6
-                  shadow-lg
-                  hover:-translate-y-1
-                  transition-all
-                  duration-300
-                "
-              >
-                <div className="flex items-start gap-5">
-
-                  <div className="bg-[#0E3655]/10 p-4 rounded-xl">
-                    <Icon className="w-6 h-6 text-[#0E3655]" />
-                  </div>
-
-                  <div>
-
-                    <h3 className="font-bold text-xl text-[#0E3655]">
-                      {item.title}
-                    </h3>
-
-                    <p className="text-gray-600 mt-2 leading-7">
-                      {item.value}
-                    </p>
-
-                  </div>
-
-                </div>
-
-              </div>
-            );
-          })}
-
-        </div>
-
       </div>
 
-      {/* Bottom Image */}
-      <div className="hidden sm:block w-full h-[350px] md:h-[450px] overflow-hidden">
-
+      {/* BOTTOM IMAGE */}
+      {/* BOTTOM IMAGE — Hidden on Mobile */}
+      <div className="hidden sm:block w-full h-[320px] md:h-[400px] lg:h-[480px] overflow-hidden">
         <Image
           src="/contact-bg.png"
           alt="Contact Background"
           width={1920}
           height={1080}
-          className="w-full h-full object-cover"
+          className="object-cover w-full h-full"
           priority
         />
-
       </div>
 
     </section>
