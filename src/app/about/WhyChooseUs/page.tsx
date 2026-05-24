@@ -1,71 +1,62 @@
 import { CheckCircle2 } from "lucide-react";
 
 export default function WhyChooseUs() {
+  const missions = [
+    "To deliver reliable, timely, and ethical advisory services.",
+    "To help organizations focus on growth by simplifying statutory and financial complexities.",
+    "To integrate technology and expertise for smarter, data-backed decision-making.",
+    "To create measurable impact for clients and the communities we serve.",
+    "To nurture long-term relationships built on trust, transparency, and performance.",
+  ];
+
   return (
-    <section className="py-20 px-6 md:px-20 bg-white text-[#0E3655]">
-      <div className="max-w-4xl mx-auto text-center">
+    <section className="bg-[#0E3655] py-20 px-6 md:px-16">
+      <div className="max-w-6xl mx-auto">
+        {/* Heading */}
+        <div className="text-center mb-14">
+          <h2 className="text-white text-4xl md:text-5xl font-bold">
+            Vision & Mission
+          </h2>
 
-        {/* Vision Section */}
-        <h2 className="text-3xl md:text-5xl font-serif font-bold mb-4 text-[#0A2238]">
-          Our Vision
-        </h2>
+          <div className="w-24 h-1 bg-[#D4AF37] mx-auto mt-4 rounded-full"></div>
 
-        <div className="h-[2px] w-20 bg-blue-200 mx-auto mb-10 rounded-full" />
-
-        <p className="text-lg md:text-xl leading-relaxed opacity-90 max-w-3xl mx-auto">
-          To be India’s most trusted and technology-driven consultancy, empowering
-          businesses to stay compliant, financially efficient, and future-ready
-          in an evolving regulatory environment.
-        </p>
-
-        {/* Mission Section */}
-        <h2 className="pt-10 text-3xl md:text-5xl font-serif font-bold mb-4 text-[#0A2238]">
-          Our Mission
-        </h2>
-
-        <div className="h-[2px] w-20 bg-blue-200 mx-auto rounded-full" />
-
-        <div className="bg-blue-50/30 backdrop-blur-sm p-8 md:p-10 rounded-2xl shadow-sm max-w-3xl mx-auto">
-
-          <div className="space-y-5 text-left">
-            <div className="flex gap-3">
-              <CheckCircle2 className="text-blue-600 w-6 h-6 flex-shrink-0 mt-1" />
-              <p className="text-lg leading-relaxed">
-                To deliver reliable, timely, and ethical advisory services.
-              </p>
-            </div>
-
-            <div className="flex gap-3">
-              <CheckCircle2 className="text-blue-600 w-6 h-6 flex-shrink-0 mt-1" />
-              <p className="text-lg leading-relaxed">
-                To help organizations focus on growth by simplifying statutory and financial complexities.
-              </p>
-            </div>
-
-            <div className="flex gap-3">
-              <CheckCircle2 className="text-blue-600 w-6 h-6 flex-shrink-0 mt-1" />
-              <p className="text-lg leading-relaxed">
-                To integrate technology and expertise for smarter, data-backed decision-making.
-              </p>
-            </div>
-
-            <div className="flex gap-3">
-              <CheckCircle2 className="text-blue-600 w-6 h-6 flex-shrink-0 mt-1" />
-              <p className="text-lg leading-relaxed">
-                To create measurable impact for clients and the communities we serve.
-              </p>
-            </div>
-
-            <div className="flex gap-3">
-              <CheckCircle2 className="text-blue-600 w-6 h-6 flex-shrink-0 mt-1" />
-              <p className="text-lg leading-relaxed">
-                To nurture long-term relationships built on trust, transparency, and performance.
-              </p>
-            </div>
-          </div>
-
+          <p className="text-gray-300 mt-5 text-lg">
+            Guided by purpose, driven by excellence
+          </p>
         </div>
 
+        {/* Vision Card */}
+        <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl mb-10">
+          <h3 className="text-[#0E3655] text-3xl font-bold mb-6">Our Vision</h3>
+
+          <p className="text-gray-700 text-lg leading-9 tracking-wide">
+            To be India’s most trusted and technology-driven consultancy,
+            empowering businesses to stay compliant, financially efficient, and
+            future-ready in an evolving regulatory environment.
+          </p>
+        </div>
+
+        {/* Mission Card */}
+        <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl">
+          <h3 className="text-[#0E3655] text-3xl font-bold mb-8">
+            Our Mission
+          </h3>
+
+          <div className="space-y-6">
+            {missions.map((mission, index) => (
+              <div
+                key={index}
+                className="flex items-start gap-4 border-b border-gray-100 pb-5 last:border-0"
+              >
+                <div className="bg-[#0E3655]/10 p-2 rounded-full">
+                  <CheckCircle2 className="w-5 h-5 text-[#0E3655]" />
+                </div>
+
+                <p className="text-gray-700 text-lg leading-8">{mission}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
