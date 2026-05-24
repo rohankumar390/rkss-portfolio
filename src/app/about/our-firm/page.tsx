@@ -5,7 +5,7 @@ export default function OurFirm() {
       style={{ backgroundImage: "url('/about-hero-bg.jpg')" }}
     >
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-[#0E3655]/85"></div>
+      <div className="absolute inset-0 bg-[#0E3655]"></div>
 
       <div className="relative max-w-6xl mx-auto">
 
