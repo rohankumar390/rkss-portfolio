@@ -168,7 +168,7 @@ export default function TermsOfUse() {
           RKSS Consultants  
           <br />42, GF, WTC, Babar Rd, New Delhi – 110 001  
           <br />Email: rkssconsultantsindia@gmail.com  
-          <br />Phone: (+91) 9958455662, 9810117603, 011-456711616
+          <br />Phone: (+91) 9289860204
         </p>
       </div>
     </section>

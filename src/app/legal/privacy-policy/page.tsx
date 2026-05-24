@@ -171,7 +171,7 @@ export default function PrivacyPolicy() {
           <br />
           Email: rkssconsultantsindia@gmail.com  
           <br />
-          Phone: (+91) 9958455662, 9810117603, 011-456711616
+          Phone: (+91) 9289860204
         </p>
       </div>
     </section>
