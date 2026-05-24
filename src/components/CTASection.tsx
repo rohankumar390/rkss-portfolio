@@ -19,13 +19,13 @@ export default function CTASection() {
           <div className="flex items-center space-x-3 text-gray-200">
             <Phone className="w-5 h-5 text-blue-300" />
             <span className="text-base md:text-lg font-medium">
-              (+91) 9958455662, 9810117603, 011-456711616,
+              (+91) 9289860204
             </span>
           </div>
           <div className="flex items-center space-x-3 text-gray-200">
             <Mail className="w-5 h-5 text-blue-300" />
             <span className="text-base md:text-lg font-medium">
-              rkssconsultants@gmail.com
+              rkssconsultantsindia@gmail.com
             </span>
           </div>
           <div className="flex items-center space-x-3 text-gray-200">

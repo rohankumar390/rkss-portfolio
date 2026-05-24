@@ -52,7 +52,7 @@ export default function ContactUs() {
             <Mail className="w-6 h-6 text-blue-700 flex-shrink-0" />
             <div>
               <span className="font-semibold text-[#0A2440]">Email</span>
-              <p className="mt-1">rkssconsultants@gmail.com</p>
+              <p className="mt-1">rkssconsultantsindia@gmail.com</p>
             </div>
           </div>
 

@@ -169,7 +169,7 @@ export default function PrivacyPolicy() {
           <br />
           42, GF, WTC, Babar Rd, New Delhi – 110 001  
           <br />
-          Email: rkssconsultants@gmail.com  
+          Email: rkssconsultantsindia@gmail.com  
           <br />
           Phone: (+91) 9958455662, 9810117603, 011-456711616
         </p>
