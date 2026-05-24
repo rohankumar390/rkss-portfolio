@@ -62,7 +62,6 @@ export default function ContactUs() {
             <div>
               <span className="font-semibold text-[#0A2440]">Phone</span>
               <p className="mt-1">(+91) 9289860204</p>
-              <p className="mt-1">(+91) 9289860204</p>
             </div>
           </div>
 
