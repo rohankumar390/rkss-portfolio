@@ -20,6 +20,10 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "RKSS Consultants",
   description: "Insight-Driven. Impact-Focused. Client-Centered.",
+  metadataBase: new URL("https://www.rkssconsultants.com"), // ✅ yeh add karo
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: [
       { url: "/favicon.ico" },
