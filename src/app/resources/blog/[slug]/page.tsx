@@ -4,7 +4,23 @@ import { notFound } from "next/navigation";
 import { blog as csrBlog } from "../../../../content/blogs/companies-csr-policy-amendment-rules-2026";
 import { blog as gstBlog } from "../../../../content/blogs/gst-blocked-credits-under-section-17-5";
 
-const allBlogs = [csrBlog, gstBlog];
+// [slug]/page.tsx mein yeh interface add karo top pe
+interface BlogSection {
+  heading: string;
+  content: string;
+  image?: string; // ✅ optional field
+}
+
+interface Blog {
+  slug: string;
+  title: string;
+  description: string;
+  publishedAt: string;
+  coverImage: string;
+  sections: BlogSection[];
+}
+
+const allBlogs: Blog[] = [csrBlog, gstBlog];
 
 export async function generateMetadata({
   params,

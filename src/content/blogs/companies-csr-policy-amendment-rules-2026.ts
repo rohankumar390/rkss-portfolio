@@ -1,4 +1,19 @@
-export const blog = {
+interface BlogSection {
+  heading: string;
+  content: string;
+  image?: string;
+}
+
+interface Blog {
+  slug: string;
+  title: string;
+  description: string;
+  publishedAt: string;
+  coverImage: string;
+  sections: BlogSection[];
+}
+
+export const blog: Blog = {
   slug: "companies-csr-policy-amendment-rules-2026",
 
   title: "Companies (CSR Policy) Amendment Rules, 2026",
