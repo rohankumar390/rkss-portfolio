@@ -406,7 +406,7 @@ function ItrTable() {
 export default function TaxCalendar() {
   const [activeTab, setActiveTab] = useState<TabId>("may");
 
-  const tabs = [
+  const tabs: { id: TabId; label: string; icon: React.ReactNode }[] = [
     {
       id: "may",
       label: "May 2026",
