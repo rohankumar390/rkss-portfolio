@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/legal/terms-of-use",
     "/resources/blog",
     "/resources/blog/companies-csr-policy-amendment-rules-2026",
+    "/resources/blog/gst-blocked-credits-under-section-17-5",
     "/resources/tax-calendar",
     "/services",
   ];

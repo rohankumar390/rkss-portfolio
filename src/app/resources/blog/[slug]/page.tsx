@@ -1,13 +1,27 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
-import { blog } from "../../../../content/blogs/companies-csr-policy-amendment-rules-2026";
+import { blog as csrBlog } from "../../../../content/blogs/companies-csr-policy-amendment-rules-2026";
+import { blog as gstBlog } from "../../../../content/blogs/gst-blocked-credits-under-section-17-5";
 
-export async function generateMetadata() {
+const allBlogs = [csrBlog, gstBlog];
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const blog = allBlogs.find((b) => b.slug === slug);
+  if (!blog) return {};
   return {
     title: blog.title,
     description: blog.description,
   };
+}
+
+export async function generateStaticParams() {
+  return allBlogs.map((blog) => ({ slug: blog.slug }));
 }
 
 export default async function BlogPost({
@@ -16,10 +30,9 @@ export default async function BlogPost({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+  const blog = allBlogs.find((b) => b.slug === slug);
 
-  if (slug !== blog.slug) {
-    return notFound();
-  }
+  if (!blog) return notFound();
 
   return (
     <section className="bg-[#0E3655] py-20 px-6 md:px-16">
@@ -29,12 +42,14 @@ export default async function BlogPost({
           <h1 className="text-white text-4xl md:text-5xl font-bold leading-tight">
             {blog.title}
           </h1>
-
           <div className="w-24 h-1 bg-[#D4AF37] mx-auto mt-5 rounded-full"></div>
-
           <p className="text-gray-300 mt-5 text-lg">
-            CORPORATE COMPLIANCE • Updated:{" "}
-            {new Date(blog.publishedAt).toLocaleDateString()}
+            Updated:{" "}
+            {new Date(blog.publishedAt).toLocaleDateString("en-IN", {
+              day: "numeric",
+              month: "long",
+              year: "numeric",
+            })}
           </p>
         </div>
 
@@ -101,12 +116,11 @@ export default async function BlogPost({
             <h3 className="text-2xl font-bold text-[#0E3655] mb-4">
               Need Professional Assistance?
             </h3>
-
             <p className="text-gray-700 text-lg leading-8">
-              If you have questions regarding CSR compliance, corporate
-              governance, regulatory filings, or any other legal and tax
-              matters, our team can help you navigate the latest requirements
-              and ensure compliance with applicable laws.
+              If you have questions regarding GST compliance, ITC eligibility,
+              corporate governance, or any other tax and regulatory matters, our
+              team can help you navigate the latest requirements and ensure full
+              compliance with applicable laws.
             </p>
           </div>
         </div>
